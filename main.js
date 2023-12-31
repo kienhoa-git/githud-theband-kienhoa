@@ -9,14 +9,6 @@ function showBuyTickets() {
 function hideBuyTickets () {
     modal.classList.remove('open')
 }
-for (const buyBtn of buyBtns) {
-    buyBtn.addEventListener('click',showBuyTickets)
-}
-modalClose.addEventListener('click',hideBuyTickets)
-modal.addEventListener('click',hideBuyTickets)
-modalContainer.addEventListener('click',function (event) {
-    event.stopPropagation()
-})
 // hàm hiện thị task menu trên mobile
 var header = document.getElementById('header')
 var mobileMenu = document.getElementById('js-mobile-menu')
