@@ -44,9 +44,10 @@ for (var i =0; i < menuItems.length; i++) {
     }
  }
 // tự động đóng menu khi chọn (pc) 
-var subMenu = document.getElementById('Menu-subnav')
-subMenu.onclick = function() {
-    if(this.style.display === 'none') {
-        this.style.display = 'block'
-    }else {this.style.display = 'none'}
+var Menu = document.getElementsByClassName('Menu')
+Menu.onclick = function() {
+    var subMenu = document.getElementById('Menu-subnav')
+    if(subMenu.style.display === 'none') {
+        subMenu.style.display = 'block'
+    }else{subMenu.style.display = 'none'}
 }
