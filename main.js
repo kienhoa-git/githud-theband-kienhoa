@@ -46,7 +46,7 @@ for (var i =0; i < menuItems.length; i++) {
 // tự động đóng menu khi chọn (pc) 
 var subMenu = document.getElementById('Menu-subnav')
 subMenu.onclick = function(e) {
-    if(e.style.display === 'none') {
-        e.style.display === block
-    }else{e.style.display === 'none' }
+    if(e.target.style.display === 'none') {
+        e.target.style.display === block
+    }else{e.target.style.display === 'none' }
 }
