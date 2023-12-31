@@ -25,18 +25,15 @@ mobileMenu.onclick = function() {
     }else{header.style.height = null}
 }
 // tự động đóng menu khi chọn
-var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
-for (var i =0; i < menuItems.length; i++) {
-    var menuItem = menuItems[i];
-    menuItem.onclick = function (event) {
-        var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
-       if (isParentMenu) {
-           event.preventDefault()
-        }else {
-           header.style.height = null
-       }
-    }
- }
+var autos = document.querySelectorAll('#nav li a[href*="#"')
+for(var i = 0; i<autos.length; i++ ) {
+  var auto = autos[i]
+  auto.onclick = function(e) {
+    if(this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')) {
+        e.preventDefault()
+    }else{header.style.height = null}
+  }
+}
 // tự động đóng menu khi chọn (pc) 
 function toggleSubmenu(id) {
     var submenu = document.getElementById(id)
