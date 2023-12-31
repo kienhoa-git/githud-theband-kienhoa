@@ -18,15 +18,11 @@ function closebuyMenu() {
 // hàm hiện thị task menu trên mobile
 var header = document.getElementById('header')
 var mobileMenu = document.getElementById('js-mobile-menu')
-var headerHeight = header.clientHeight
+var headerHeight =  header.clientHeight
 mobileMenu.onclick = function() {
-     var isClose = header.clientHeight === headerHeight
-     if (isClose) {
-        header.style.height ="auto"
-     }
-     else {
-        header.style.height = null
-     }
+    if(headerHeight) {
+        header.style.height = 'auto'
+    }else{header.style.height = null}
 }
 // tự động đóng menu khi chọn
 var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
