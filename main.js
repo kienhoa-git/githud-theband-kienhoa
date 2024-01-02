@@ -26,9 +26,8 @@ mobileMenu.onclick = function() {
 }
 // tự động đóng menu khi chọn
 var autos = document.querySelectorAll('#nav li a[href*="#"')
-for(var i = 0; i<autos.length; i++ ) {
-  var auto = autos[i]
-  auto.onclick = function(e) {
+for(mecha of autos) {
+  mecha.onclick = function(e) {
     if(this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')) {
         e.preventDefault()
     }else{header.style.height = null}
