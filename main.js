@@ -1,8 +1,13 @@
+// khai báo
+var $ = document.querySelector.bind(document)
+var $$ = document.querySelectorAll.bind(document)
+var buyBtns = $$(".js-buy-ticket");
+var modal = $(".js-modal");
+var modalClose = $(".js-modal-close");
+var modalContainer = $(".js-modal-container");
+var header = $("#header");
+var mobileMenu = $("#js-mobile-menu");
 //hàm hiển thị mua vé (thêm class open vào web)
-var buyBtns = document.querySelectorAll(".js-buy-ticket");
-var modal = document.querySelector(".js-modal");
-var modalClose = document.querySelector(".js-modal-close");
-var modalContainer = document.querySelector(".js-modal-container");
 for (buyBtn of buyBtns) {
   buyBtn.addEventListener("click", showBuyMenu);
 }
@@ -18,8 +23,6 @@ function closebuyMenu() {
   modal.classList.remove("open");
 }
 // hàm hiện thị task menu trên mobile
-var header = document.getElementById("header");
-var mobileMenu = document.getElementById("js-mobile-menu");
 var headerHeight = header.clientHeight;
 mobileMenu.onclick = function () {
   if (headerHeight) {
