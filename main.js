@@ -32,7 +32,7 @@ mobileMenu.onclick = function () {
   }
 };
 // tự động đóng menu khi chọn
-var autos = document.querySelectorAll("#nav");
+var autos = $("#nav");
 for (mecha of autos) {
   mecha.onclick = function (e) {
     if (
